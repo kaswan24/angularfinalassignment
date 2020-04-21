@@ -12,7 +12,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Input</span>
       </div>
-      <input #todoInput type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" >
+      <input #todoInput type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" (input)="onInput(todoInput.value)" >
     </div>
   </div>
 </div>
