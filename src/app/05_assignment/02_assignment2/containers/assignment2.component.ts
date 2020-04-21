@@ -16,4 +16,12 @@ export class Assignment2Component {
     this.list = this.newComponent.todos;
   }
 
+  select(item) {
+    this.selected = (this.selected === item ? null : item); 
+  };
+  
+  isActive(item) {
+    return this.selected === item;
+  };
+
 }
