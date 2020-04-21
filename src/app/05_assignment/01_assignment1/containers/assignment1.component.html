@@ -15,4 +15,12 @@
       <input #todoInput type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" (input)="onInput(todoInput.value)" >
     </div>
   </div>
+  <div class="container your-code">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Result</span>
+      </div>
+      <label>{{output}}</label>
+    </div>
+  </div>
 </div>
