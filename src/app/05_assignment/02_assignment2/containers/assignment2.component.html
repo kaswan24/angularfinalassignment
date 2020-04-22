@@ -7,23 +7,33 @@
     <li class="list-group-item">Apply the "active" class to the row when user clicks on it</li>
   </ul>
   <div class="container your-code" >
-   <table class="table table-bordered" style="text-align: center;">
-      <thead>
-         <tr class="table-dark">
-            <th>#ID</th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Completed</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr *ngFor="let item of list" (click)="select(item)" [ngClass]="{'active': isActive(item), 'table-warning': !isActive(item)}">
-            <th>{{ item.id }}</th>
-            <td>{{ item.type }}</td>
-            <td>{{ item.description }}</td>
-            <td>{{ item.completed}}</td>
-         </tr>
-      </tbody>
-    </table>
+   <div class="card text-center">
+      <div class="card-header">
+        Todo-List
+      </div>
+      <div class="card-body card text-white bg-secondary">
+         <table #todoTable class="table table-bordered" style="text-align: center;">
+            <thead>
+               <tr class="table-dark text-info">
+                  <th>#ID</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                  <th>Completed</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let item of list" (click)="select(item)" [ngClass]="{'active': isActive(item), 'table-warning': !isActive(item)}">
+                  <th>{{ item.id }}</th>
+                  <td>{{ item.type }}</td>
+                  <td>{{ item.description }}</td>
+                  <td>{{ item.completed}}</td>
+               </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="card-footer text-white bg-success">
+        (Total Tasks -- {{totalRecords}})__| |__ (Selected TaskId -- {{selectedId}})
+      </div>
+    </div>
   </div>
 </div>
