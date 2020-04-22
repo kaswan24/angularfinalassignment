@@ -10,17 +10,27 @@
   <div class="container your-code">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Input</span>
+        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color:khaki;">Input</span>
       </div>
-      <input #todoInput type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" (input)="onInput(todoInput.value)" >
+      <input #todoInput type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" (input)="onInput(todoInput.value)" placeholder="Please Enter Data" >
     </div>
   </div>
   <div class="container your-code">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Result</span>
       </div>
-      <label>{{output}}</label>
     </div>
+  </div>
+</div>
+<div class="card text-center">
+  <div class="card-header">
+    Result
+  </div>
+  <div class="card-body card text-white bg-info">
+    <h5 class="card-title">You Made Following Input-</h5>
+    <p class="card-text">{{output}}</p>
+  </div>
+  <div class="card-footer text-white bg-success">
+    Characters So Far(Including White Space)-- {{outLength}}
   </div>
 </div>

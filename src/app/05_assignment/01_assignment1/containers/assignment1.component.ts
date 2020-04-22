@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class Assignment1Component {
 
   output = '';
+  outLength = 0;
   onInput(inputValue: string): void {  
     this.output = inputValue;
+    this.outLength = inputValue.length;
   }
 
 }
